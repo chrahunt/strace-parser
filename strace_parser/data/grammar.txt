@@ -1,0 +1,44 @@
+_LF : "\n"
+_EQ : "="
+_SP : " "
+PERIOD : "."
+
+NOT_LF : /[^\n]+/
+
+DIGIT : /[0-9]/
+DIGITS : DIGIT+
+TIMESTAMP : DIGITS PERIOD DIGITS
+DURATION : DIGITS PERIOD DIGITS
+
+start : line+
+line : timestamp _SP body _LF
+timestamp : TIMESTAMP
+body : syscall | alert_body
+
+syscall : syscall_name "(" syscall_args ")" _SP+ "=" _SP+ syscall_result (_SP syscall_duration)?
+syscall_name : /[a-z0-9A-Z_]+/ -> name
+syscall_args : _syscall_arg? ("," _SP _syscall_arg)* -> args
+_syscall_arg : braced
+             | bracketed
+             | key_value
+             | function_like
+             | sigset
+             | other
+
+syscall_result : NOT_LF -> result
+syscall_duration : "<" DURATION ">" -> duration
+
+bracketed : "[" syscall_args "]"
+braced : "{" syscall_args "}"
+key_value : key_value_key "=" key_value_value
+key_value_key : /[a-zA-Z_]+/ -> key
+key_value_value : _syscall_arg -> value
+function_like : /[a-zA-Z_]+/ "(" syscall_args ")"
+
+NEGATED : "~"
+SIGNAL : /[0-9A-Z_]+/
+sigset : NEGATED? "[" SIGNAL? (_SP SIGNAL)* "]"
+// Anything else
+other : /[^,)}\]]+/
+
+alert_body : "+++" _SP "exited with" _SP DIGITS _SP "+++"

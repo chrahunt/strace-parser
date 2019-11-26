@@ -1,0 +1,154 @@
+1577836800.000000 access("\x01\x23\x45", F_OK) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 access("\x01\x23\x45", R_OK) = 123 <0.000001>
+1577836800.000000 access("\x01\x23\x45", R_OK) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 arch_prctl(ARCH_SET_FS, 0x012345) = 123 <0.000001>
+1577836800.000000 brk(0x012345) = 0x012345 <0.000001>
+1577836800.000000 brk(NULL) = 0x012345 <0.000001>
+1577836800.000000 clock_getres(CLOCK_MONOTONIC, {tv_sec=123, tv_nsec=123}) = 123 <0.000001>
+1577836800.000000 clone(child_stack=0x012345, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x012345, tls=0x012345, child_tidptr=0x012345) = 123 <0.000001>
+1577836800.000000 close(0<\x01\x23\x45>) = 123 <0.000001>
+1577836800.000000 connect(0<\x01\x23\x45>, {sa_family=AF_UNIX, sun_path="\x01\x23\x45"}, 123) = 123 <0.000001>
+1577836800.000000 connect(0<\x01\x23\x45>, {sa_family=AF_UNIX, sun_path=@"\x01\x23\x45"}, 123) = 123 <0.000001>
+1577836800.000000 connect(0<\x01\x23\x45>, {sa_family=AF_UNIX, sun_path="\x01\x23\x45"}, 123) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 execve("\x01\x23\x45", ["\x01\x23\x45"...], 0x012345 /* 123 vars */) = 123 <0.000001>
+1577836800.000000 +++ exited with 123 +++
+1577836800.000000 exit_group(123) = ?
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_DUPFD, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_DUPFD_CLOEXEC, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_GETFD) = 123 <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_GETFL) = 0x012345 (flags O_RDWR) <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_GETFL) = 0x012345 (flags O_RDWR|O_NONBLOCK) <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_SETFD, FD_CLOEXEC) = 123 <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_SETFL, O_RDWR|O_NONBLOCK) = 123 <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=123, l_len=123}) = -123 EAGAIN (Resource temporarily unavailable) <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_SETLKW, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=123, l_len=123}) = 123 <0.000001>
+1577836800.000000 fcntl(0<\x01\x23\x45>, F_SETLKW, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=123, l_len=123}) = 123 <0.000001>
+1577836800.000000 fstat(0<\x01\x23\x45>, {st_mode=S_IFCHR|123, st_rdev=makedev(123, 123), ...}) = 123 <0.000001>
+1577836800.000000 fstat(0<\x01\x23\x45>, {st_mode=S_IFDIR|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 fstat(0<\x01\x23\x45>, {st_mode=S_IFREG|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 fstat(0<\x01\x23\x45>, {st_mode=S_IFREG|S_ISUID|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 fstatfs(0<\x01\x23\x45>, {f_type=EXT2_SUPER_MAGIC, f_bsize=123, f_blocks=123, f_bfree=123, f_bavail=123, f_files=123, f_ffree=123, f_fsid={val=[123, 123]}, f_namelen=123, f_frsize=123, f_flags=ST_VALID|ST_RELATIME}) = 123 <0.000001>
+1577836800.000000 ftruncate(0<\x01\x23\x45>, 123) = 123 <0.000001>
+1577836800.000000 futex(0x012345, FUTEX_WAIT, 123, NULL) = 123 <0.000001>
+1577836800.000000 futex(0x012345, FUTEX_WAIT_PRIVATE, 123, NULL) = 123 <0.000001>
+1577836800.000000 futex(0x012345, FUTEX_WAIT_PRIVATE, 123, NULL) = -123 EAGAIN (Resource temporarily unavailable) <0.000001>
+1577836800.000000 futex(0x012345, FUTEX_WAKE_PRIVATE, 123) = 123 <0.000001>
+1577836800.000000 getdents(0<\x01\x23\x45>, /* 123 entries */, 123) = 123 <0.000001>
+1577836800.000000 getegid() = 123 <0.000001>
+1577836800.000000 geteuid() = 123 <0.000001>
+1577836800.000000 getgid() = 123 <0.000001>
+1577836800.000000 getpeername(0<\x01\x23\x45>, {sa_family=AF_UNIX}, [123->123]) = 123 <0.000001>
+1577836800.000000 getpeername(0<\x01\x23\x45>, {sa_family=AF_UNIX, sun_path=@"\x01\x23\x45"}, [123->123]) = 123 <0.000001>
+1577836800.000000 getpid() = 123 <0.000001>
+1577836800.000000 getppid() = 123 <0.000001>
+1577836800.000000 getrandom("\x01\x23\x45", 123, GRND_NONBLOCK) = 123 <0.000001>
+1577836800.000000 getresgid([123], [123], [123]) = 123 <0.000001>
+1577836800.000000 getresuid([123], [123], [123]) = 123 <0.000001>
+1577836800.000000 getsockname(0<\x01\x23\x45>, {sa_family=AF_UNIX}, [123->123]) = 123 <0.000001>
+1577836800.000000 getsockopt(0<\x01\x23\x45>, SOL_SOCKET, SO_SNDBUF, [123], [123]) = 123 <0.000001>
+1577836800.000000 getsockopt(0<\x01\x23\x45>, SOL_SOCKET, SO_TYPE, [123], [123]) = 123 <0.000001>
+1577836800.000000 getuid() = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_AMDGPU_CTX or DRM_IOCTL_ETNAVIV_GEM_NEW or DRM_IOCTL_MSM_GEM_NEW or DRM_IOCTL_VC4_WAIT_BO, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_AMDGPU_GEM_CREATE or DRM_IOCTL_VIA_ALLOCMEM, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_AMDGPU_GEM_MMAP, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_AMDGPU_INFO or DRM_IOCTL_SIS_FB_FREE, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_GEM_CLOSE, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_GET_CAP, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, DRM_IOCTL_VERSION, 0x012345) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, FIONREAD, [123]) = 123 <0.000001>
+1577836800.000000 ioctl(0<\x01\x23\x45>, _IOC(_IOC_READ|_IOC_WRITE, 0x012345, 0x012345, 0x012345), 0x012345) = 123 <0.000001>
+1577836800.000000 lseek(0<\x01\x23\x45>, -123, SEEK_CUR) = 123 <0.000001>
+1577836800.000000 lseek(0<\x01\x23\x45>, 123, SEEK_CUR) = 123 <0.000001>
+1577836800.000000 lseek(0<\x01\x23\x45>, 123, SEEK_SET) = 123 <0.000001>
+1577836800.000000 lstat("\x01\x23\x45", 0x012345) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 lstat("\x01\x23\x45", {st_mode=S_IFDIR|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 lstat("\x01\x23\x45", {st_mode=S_IFLNK|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 lstat("\x01\x23\x45", {st_mode=S_IFREG|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 mmap(0x012345, 123, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(0x012345, 123, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -123, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(0x012345, 123, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 0<\x01\x23\x45>, 0x012345) = 0x012345 <0.000001>
+1577836800.000000 mmap(0x012345, 123, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -123, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ, MAP_PRIVATE, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ, MAP_SHARED, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -123, 123) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ|PROT_WRITE, MAP_SHARED, 0<\x01\x23\x45>, 0x012345) = 0x012345 <0.000001>
+1577836800.000000 mmap(NULL, 123, PROT_READ|PROT_WRITE, MAP_SHARED, 0<\x01\x23\x45>, 123) = 0x012345 <0.000001>
+1577836800.000000 mprotect(0x012345, 123, PROT_NONE) = 123 <0.000001>
+1577836800.000000 mprotect(0x012345, 123, PROT_READ) = 123 <0.000001>
+1577836800.000000 mprotect(0x012345, 123, PROT_READ|PROT_WRITE) = 123 <0.000001>
+1577836800.000000 munmap(0x012345, 123) = 123 <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDONLY) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDONLY) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDONLY|O_CLOEXEC) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDONLY|O_CLOEXEC) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 openat(AT_FDCWD, "\x01\x23\x45", O_RDWR|O_CREAT|O_CLOEXEC, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 pipe2([0<\x01\x23\x45>, 0<\x01\x23\x45>], O_NONBLOCK|O_CLOEXEC) = 123 <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLIN}], 123, -123) = 123 ([{fd=123, revents=POLLIN}]) <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLIN}], 123, 123) = 123 ([{fd=123, revents=POLLIN}]) <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLIN|POLLOUT}], 123, -123) = 123 ([{fd=123, revents=POLLIN|POLLOUT}]) <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLIN|POLLOUT}], 123, -123) = 123 ([{fd=123, revents=POLLOUT}]) <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLOUT}], 123, -123) = 123 ([{fd=123, revents=POLLOUT}]) <0.000001>
+1577836800.000000 poll([{fd=0<\x01\x23\x45>, events=POLLOUT}], 123, 123) = 123 ([{fd=123, revents=POLLOUT}]) <0.000001>
+1577836800.000000 prlimit64(123, RLIMIT_STACK, NULL, {rlim_cur=123*123, rlim_max=RLIM64_INFINITY}) = 123 <0.000001>
+1577836800.000000 pselect6(123, [0<\x01\x23\x45>], [0<\x01\x23\x45>], NULL, {tv_sec=123, tv_nsec=123}, {NULL, 123}) = 123 (out [123], left {tv_sec=123, tv_nsec=123}) <0.000001>
+1577836800.000000 pselect6(123, [0<\x01\x23\x45>], [], NULL, {tv_sec=123, tv_nsec=123}, {NULL, 123}) = 123 (in [123], left {tv_sec=123, tv_nsec=123}) <0.000001>
+1577836800.000000 read(0<\x01\x23\x45>, "", 123) = 123 <0.000001>
+1577836800.000000 read(0<\x01\x23\x45>, "\x01\x23\x45", 123) = 123 <0.000001>
+1577836800.000000 read(0<\x01\x23\x45>, "\x01\x23\x45"..., 123) = 123 <0.000001>
+1577836800.000000 readlink("\x01\x23\x45", "\x01\x23\x45", 123) = 123 <0.000001>
+1577836800.000000 readlink("\x01\x23\x45", "\x01\x23\x45"..., 123) = 123 <0.000001>
+1577836800.000000 recvfrom(0<\x01\x23\x45>, 0x012345, 123, 123, NULL, NULL) = -123 EAGAIN (Resource temporarily unavailable) <0.000001>
+1577836800.000000 recvfrom(0<\x01\x23\x45>, "\x01\x23\x45", 123, 123, NULL, NULL) = 123 <0.000001>
+1577836800.000000 recvfrom(0<\x01\x23\x45>, "\x01\x23\x45"..., 123, 123, NULL, NULL) = 123 <0.000001>
+1577836800.000000 recvmsg(0<\x01\x23\x45>, {msg_namelen=123}, 123) = -123 EAGAIN (Resource temporarily unavailable) <0.000001>
+1577836800.000000 recvmsg(0<\x01\x23\x45>, {msg_namelen=123}, MSG_CMSG_CLOEXEC) = -123 EAGAIN (Resource temporarily unavailable) <0.000001>
+1577836800.000000 recvmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45", iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 recvmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45"..., iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 recvmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45"..., iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=MSG_CMSG_CLOEXEC}, MSG_CMSG_CLOEXEC) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGCHLD, {sa_handler=0x012345, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGCHLD, {sa_handler=0x012345, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO|SA_NOCLDSTOP, sa_restorer=0x012345}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGINT, {sa_handler=0x012345, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGRT_1, {sa_handler=0x012345, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGRTMIN, {sa_handler=0x012345, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=123}, 123) = 123 <0.000001>
+1577836800.000000 rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER, sa_restorer=0x012345}, NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigprocmask(SIG_SETMASK, [], NULL, 123) = 123 <0.000001>
+1577836800.000000 rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 123) = 123 <0.000001>
+1577836800.000000 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 123) = 123 <0.000001>
+1577836800.000000 sched_setscheduler(123, SCHED_IDLE, [123]) = 123 <0.000001>
+1577836800.000000 sendmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45"..., iov_len=123}, {iov_base="", iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=123}, MSG_NOSIGNAL) = 123 <0.000001>
+1577836800.000000 sendmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45"..., iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=123}, MSG_NOSIGNAL) = 123 <0.000001>
+1577836800.000000 sendmsg(0<\x01\x23\x45>, {msg_name=NULL, msg_namelen=123, msg_iov=[{iov_base="\x01\x23\x45"..., iov_len=123}, {iov_base="\x01\x23\x45"..., iov_len=123}], msg_iovlen=123, msg_controllen=123, msg_flags=123}, MSG_NOSIGNAL) = 123 <0.000001>
+1577836800.000000 sendto(0<\x01\x23\x45>, "\x01\x23\x45", 123, MSG_NOSIGNAL, NULL, 123) = 123 <0.000001>
+1577836800.000000 set_robust_list(0x012345, 123) = 123 <0.000001>
+1577836800.000000 set_tid_address(0x012345) = 123 <0.000001>
+1577836800.000000 shutdown(0<\x01\x23\x45>, SHUT_RDWR) = 123 <0.000001>
+1577836800.000000 socket(AF_UNIX, SOCK_STREAM, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 123) = 0<\x01\x23\x45> <0.000001>
+1577836800.000000 statfs("\x01\x23\x45", {f_type=EXT2_SUPER_MAGIC, f_bsize=123, f_blocks=123, f_bfree=123, f_bavail=123, f_files=123, f_ffree=123, f_fsid={val=[123, 123]}, f_namelen=123, f_frsize=123, f_flags=ST_VALID|ST_RELATIME}) = 123 <0.000001>
+1577836800.000000 stat("\x01\x23\x45", 0x012345) = -123 ENOENT (No such file or directory) <0.000001>
+1577836800.000000 stat("\x01\x23\x45", {st_mode=S_IFCHR|123, st_rdev=makedev(123, 123), ...}) = 123 <0.000001>
+1577836800.000000 stat("\x01\x23\x45", {st_mode=S_IFDIR|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 stat("\x01\x23\x45", {st_mode=S_IFREG|123, st_size=123, ...}) = 123 <0.000001>
+1577836800.000000 sysinfo({uptime=123, loads=[123, 123, 123], totalram=123, freeram=123, sharedram=123, bufferram=123, totalswap=123, freeswap=123, procs=123, totalhigh=123, freehigh=123, mem_unit=123}) = 123 <0.000001>
+1577836800.000000 uname({sysname="\x01\x23\x45", nodename="\x01\x23\x45", ...}) = 123 <0.000001>
+1577836800.000000 write(0<\x01\x23\x45>, "\x01\x23\x45", 123) = 123 <0.000001>
+1577836800.000000 write(0<\x01\x23\x45>, "\x01\x23\x45"..., 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45"..., iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45", iov_len=123}, {iov_base="", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45", iov_len=123}, {iov_base=NULL, iov_len=123}, {iov_base="", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45"..., iov_len=123}, {iov_base=NULL, iov_len=123}, {iov_base="", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}], 123) = 123 <0.000001>
+1577836800.000000 writev(0<\x01\x23\x45>, [{iov_base="\x01\x23\x45"..., iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}, {iov_base="\x01\x23\x45", iov_len=123}], 123) = 123 <0.000001>
