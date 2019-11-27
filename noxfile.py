@@ -7,7 +7,7 @@ nox_session = partial(nox.session, python="3.8", reuse_venv=True)
 
 
 @nox_session()
-def tests(session):
+def test(session):
     session.install("pytest", "pytest-xdist")
     session.install(".")
     session.run("pytest", *session.posargs)
