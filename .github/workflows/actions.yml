@@ -1,0 +1,46 @@
+name: Actions
+
+on:
+  push:
+    branches:
+    - '**'
+    tags-ignore:
+    - '**'
+
+jobs:
+  test-and-build:
+    name: Test and build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install nox
+      run: python3.7 -m pip install nox
+    - name: Test
+      run: nox -s test
+    - name: Lint
+      run: nox -s lint
+    - name: Build
+      run: nox -s build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: dist/
+      # TODO: Stream zip to aws cli directly.
+    - name: Zip distributions
+      run: zip -r dist.zip dist/
+      # XXX: While Github Actions does not have a way to do cross-workflow
+      #  artifact sharing, we upload and download from an s3 bucket dedicated
+      #  to this purpose.
+    - name: Upload artifacts (S3)
+      # Only run for merges to master.
+      if: github.ref == 'refs/heads/master'
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.pkg_aws_access_key_id }}
+        AWS_DEFAULT_REGION: ${{ secrets.pkg_aws_region }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.pkg_aws_secret_access_key }}
+      run: "aws s3 cp dist.zip s3://${{ secrets.pkg_aws_bucket_name }}/artifact/${{ github.sha }}"
