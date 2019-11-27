@@ -1,9 +1,8 @@
 from importlib.resources import read_text
 
 import pytest
-
-from strace_parser.parser import get_parser
 import tests.data
+from strace_parser.parser import get_parser
 
 
 @pytest.mark.parametrize("line", read_text(tests.data, "samples.txt").splitlines())

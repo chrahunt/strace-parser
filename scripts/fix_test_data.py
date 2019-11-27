@@ -5,19 +5,10 @@ cat strace.log | python scripts/fix_test_data.py | sort | uniq
 import fileinput
 import re
 
-
-_file_re = re.compile(
-    r"(?P<before>.*?)\d+<(?:\\x[0-9a-f][0-9a-f])+>(?P<after>.*)"
-)
-_string_re = re.compile(
-    r'(?P<before>.*?)"(?:\\x[0-9a-f][0-9a-f])+"(?P<after>.*)'
-)
-_hex_re = re.compile(
-    r"(?P<before>.*?)0x[0-9a-f]+(?P<after>.*)"
-)
-_num_re = re.compile(
-    r"\b\d+\b"
-)
+_file_re = re.compile(r"(?P<before>.*?)\d+<(?:\\x[0-9a-f][0-9a-f])+>(?P<after>.*)")
+_string_re = re.compile(r'(?P<before>.*?)"(?:\\x[0-9a-f][0-9a-f])+"(?P<after>.*)')
+_hex_re = re.compile(r"(?P<before>.*?)0x[0-9a-f]+(?P<after>.*)")
+_num_re = re.compile(r"\b\d+\b")
 
 
 def process(line):
