@@ -1,5 +1,6 @@
 /.nox/
 /.pytest_cache/
+/.mypy_cache/
 /dist/
 
 __pycache__/

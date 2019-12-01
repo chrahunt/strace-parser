@@ -2,10 +2,10 @@ from importlib.resources import read_text
 
 import pytest
 from lark import Token, Tree
-
 from strace_parser.json_transformer import to_json
 from strace_parser.parser import get_parser
-import tests.data
+
+from . import data
 
 
 def assert_fully_serialized(obj):
@@ -20,15 +20,15 @@ def assert_fully_serialized(obj):
             for v in obj:
                 _assert_fully_serialized(v)
         else:
-            assert isinstance(obj, (str, float, bool)), (
-                f"Unexpected type {obj} in {original}"
-            )
+            assert isinstance(
+                obj, (str, float, bool)
+            ), f"Unexpected type {obj} in {original}"
 
     original = obj
     _assert_fully_serialized(obj)
 
 
-@pytest.mark.parametrize("line", read_text(tests.data, "samples.txt").splitlines())
+@pytest.mark.parametrize("line", read_text(data, "samples.txt").splitlines())
 def test_json_fully_transforms(line):
     tree = get_parser().parse(line + "\n")
     result = to_json(tree)
@@ -69,5 +69,5 @@ def test_json_transformer():
             {"type": "other", "value": "123"},
         ],
         "name": "connect",
-        "result": "-123 ENOENT (No such file or directory) <0.000001>"
+        "result": "-123 ENOENT (No such file or directory) <0.000001>",
     } == line, f"Did not match {tree.pretty()}"

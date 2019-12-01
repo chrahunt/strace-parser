@@ -2,7 +2,6 @@ from functools import partial
 
 import nox
 
-
 nox_session = partial(nox.session, python="3.8", reuse_venv=True)
 
 
@@ -28,3 +27,5 @@ def lint(session):
 @nox_session()
 def build(session):
     session.install("flit")
+
+    session.run("flit", "build")

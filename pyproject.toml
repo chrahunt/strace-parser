@@ -27,3 +27,10 @@ requires-python = ">=3.8.0"
 
 [tool.flit.scripts]
 strace-parser = "strace_parser.cli:main"
+
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 88
+multi_line_output = 3
+use_parentheses = true
