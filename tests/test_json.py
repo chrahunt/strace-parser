@@ -2,6 +2,7 @@ from importlib.resources import read_text
 
 import pytest
 from lark import Token, Tree
+
 from strace_parser.json_transformer import to_json
 from strace_parser.parser import get_parser
 

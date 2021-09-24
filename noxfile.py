@@ -21,6 +21,8 @@ def lint(session):
     else:
         args = ["--all-files", "--show-diff-on-failure"]
 
+    session.run("pre-commit", "autoupdate")
+
     session.run("pre-commit", "run", *args)
 
 
