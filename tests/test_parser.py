@@ -1,6 +1,7 @@
 from importlib.resources import read_text
 
 import pytest
+
 import tests.data
 from strace_parser.parser import get_parser
 
